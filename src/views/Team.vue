@@ -2,7 +2,25 @@
   <div class="team">
     <h1 class="subheading grey--text">Team</h1>
     <v-container class="my-5">
-        content
+        <v-layout row wrap>
+          <v-flex xs12 sm6 md4 lg v-for="person in team" :key="person.name">
+            <v-card flat class="text-center" ma-3>
+              <v-responsive class="pt-4">
+                image goes here
+              </v-responsive>
+              <v-card-text>
+                <div class="subheading">{{ person.name }}</div>
+                <div class="grey--text">{{ person.role }}</div>
+              </v-card-text>
+              <v-card-action>
+                <v-btn flat color="grey">
+                  <v-icon small left>mdi-message</v-icon>
+                  <span>message</span>
+                </v-btn>
+              </v-card-action>
+            </v-card>
+          </v-flex>
+        </v-layout>
     </v-container>
   </div>
 </template>
@@ -11,5 +29,16 @@
 // @ is an alias to /src
 
 export default {
+  data(){
+    return{
+      team: [
+        { name: 'The Net Ninja', role: 'Web developer' },
+        { name: 'Ryu', role: 'Graphic designer' },
+        { name: 'Chun Li', role: 'Web developer' },
+        { name: 'Gouken', role: 'Social media maverick' },
+        { name: 'Yoshi', role: 'Sales guru'}
+      ]
+      }
+  }
 }
 </script>
