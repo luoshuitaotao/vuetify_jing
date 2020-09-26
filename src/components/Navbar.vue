@@ -33,7 +33,7 @@
                         <img src="/avatar-1.png">
                     </v-avatar>
                     <p class="white--text subheading mt-1">
-                        The Net Ninga
+                        The Net Ninja
                     </p>
                 </v-flex>
             </v-layout>
